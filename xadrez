@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int i;
+
+    // Simulando movimento da Torre com estrutura FOR (linha reta)
+    printf("Movimento da TORRE (linha reta para a direita):\n");
+    for (i = 1; i <= 8; i++) {
+        printf("Torre move para a direita, casa %d\n", i);
+    }
+
+    // Simulando movimento do Bispo com estrutura WHILE (diagonal)
+    int linha = 1, coluna = 1;
+    printf("\nMovimento do BISPO (diagonal inferior direita):\n");
+    while (linha <= 8 && coluna <= 8) {
+        printf("Bispo move para diagonal inferior direita: casa (%d, %d)\n", linha, coluna);
+        linha++;
+        coluna++;
+    }
+
+    // Simulando movimento da Rainha com estrutura DO-WHILE (linha reta para cima)
+    int pos = 8;
+    printf("\nMovimento da RAINHA (linha reta para cima):\n");
+    do {
+        printf("Rainha move para cima, casa %d\n", pos);
+        pos--;
+    } while (pos >= 1);
+
+    return 0;
+}
